@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Food Delivery App</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar" id="mynav">
+            <div class="logo">
+                <img src="./logo.svg" alt="Logo">
+            </div>
+            <div class="menu-icon" id="openDrawerButton">
+                <i class="material-icons">menu</i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#explore" class="nav-link">Explore</a></li>
+                    <li><a href="#help" class="nav-link">Help</a></li>
+                    <li class="profile">
+                        <label for="profilePictureInput" class="profile-picture-label">
+                            <img src="./Profile.svg" alt="Profile Picture" class="profile-picture">
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="carousel-container" id="home">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="./nav.svg" alt="Carousel Image 1">
+                <div class="carousel-text">
+                    <h3>Trending Now</h3>
+                    <h1>Mike's famous salad with cheese</h1>
+                    <p>By Sainath Islavath</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search bar below the carousel -->
+    <div class="search">
+        <h1>Search for recipes</h1>
+        <div class="search1">
+            <input type="text" id="searchInput" placeholder="Search recipes...">
+            <div class="search-icon" id="searchIcon">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.5 4C7.63401 4 4.5 7.13401 4.5 11C4.5 14.866 7.63401 18 11.5 18C15.366 18 18.5 14.866 18.5 11C18.5 7.13401 15.366 4 11.5 4ZM2.5 11C2.5 6.02944 6.52944 2 11.5 2C16.4706 2 20.5 6.02944 20.5 11C20.5 15.9706 16.4706 20 11.5 20C6.52944 20 2.5 15.9706 2.5 11Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.4429 15.9429C16.8334 15.5524 17.4666 15.5524 17.8571 15.9429L22.2071 20.2929C22.5977 20.6834 22.5977 21.3166 22.2071 21.7071C21.8166 22.0977 21.1834 22.0977 20.7929 21.7071L16.4429 17.3571C16.0524 16.9666 16.0524 16.3334 16.4429 15.9429Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-container" id="explore">
+        <div class="type-filter">
+            <button id="AllRecipes">All Recipes</button>
+            <button id="VegRecipes">Veg Recipes Only</button>
+            <button id="NonVegRecipes">Non Veg Recipes</button>
+        </div>
+    </div> <br> <br>
+
+    <aside id="sidebar">
+        <h2>Filters</h2>
+        <br><br>
+        <h3>Rating</h3>
+        <label>
+            <input type="radio" name="ratingFilter" id="ratingFilterAbove">
+            4 and above
+        </label>
+        <label>
+            <input type="radio" name="ratingFilter" id="ratingFilterBelow">
+            Below 4
+        </label>
+    </aside>
+
+
+    <main id="recipeContainer">
+        <!-- Recipe cards will be dynamically added here -->
+    </main>
+    <aside class="mobile-drawer" id="mobileDrawer">
+        <div class="menu-container">
+            <nav>
+                <div class="logo">
+                    <img src="./logo.svg" alt="Logo">
+                </div><br>
+                <ul class="items" style="display: flex; flex-direction: column; text-align: left; margin-left: 0%;">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#explore" class="nav-link">Explore</a></li>
+                    <li><a href="#help" class="nav-link">Help</a></li>
+                </ul>
+            </nav>
+            <div class="profile drawer-profile">
+                <label for="profilePictureInput" class="profile-picture-label">
+                    <img src="./Profile.svg" alt="Profile Picture" class="profile-picture">
+                </label>
+            </div>
+        </div>
+        <div class="close-drawer" id="closeDrawerButton">
+            <i class="material-icons">close</i>
+        </div>
+    </aside>
+    <footer id="help">
+        <div class="footer-content">
+            <div class="company-info">
+                <img src="logo.svg" alt="Company Logo">
+                <p class="para">Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search
+                    function.
+                    Join our community and let's cook together!</p>
+            </div>
+
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Explore</li>
+                    <li>Team</li>
+                    <li>About us</li>
+                    <li>Activity</li>
+                    <!-- Add more components here -->
+                </ul>
+            </div>
+
+            <div class="resources">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Blog</li>
+                    <li>Use Cases</li>
+                    <li>Testimonials</li>
+                    <li>Insights</li>
+                    <!-- Add more components here -->
+                </ul>
+            </div>
+
+            <div class="subscribe">
+                <div class="company-info">
+                    <img src="logo.svg" alt="Company Logo">
+                    <p class="para">Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.</p>
+                    <input type="text" id="emailInput" placeholder="Your Email">
+                    <button id="subscribeButton">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
